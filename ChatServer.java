@@ -22,7 +22,7 @@ public class ChatServer {
 
     static void broadcastMessage(String message, ClientHandler sender) {
         for (ClientHandler client : clients) {
-            if (client != sender) { // Не отправлять сообщение отправителю
+            if (client != sender) { 
                 client.sendMessage(message);
             }
         }
