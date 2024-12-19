@@ -13,7 +13,6 @@ public class ChatClient {
 
             System.out.println("Подключено к чату!");
 
-            // Поток для получения сообщений от сервера
             new Thread(() -> {
                 String message;
                 try {
@@ -25,7 +24,6 @@ public class ChatClient {
                 }
             }).start();
 
-            // Отправка сообщений на сервер
             String userInput;
             while ((userInput = consoleReader.readLine()) != null) {
                 out.println(userInput);
